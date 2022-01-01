@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myjs.js"></script>
+</head>
+<body>
+    <a href="javascript:alert('こんにちは')">测试</a>
+    <input type="button" value="测试" onclick="alert('こんにちは')">
+    <script>
+       /*  alert('こんにちは、javascript'); */
+        document.write('アニメーション');
+        var str = "飞雪连天射白鹿，笑书神侠倚碧鸳";
+        var newstr = new String("飞雪连天射白鹿，笑书神侠倚碧鸳");//创建字符串对象
+        document.write(typeof(str));// string
+        document.write(typeof(newstr));//object
+        document.write(newstr.length);//15
+
+        var newString = new String("abcdefg");
+        var p = newString.length;
+        document.write(p);
+
+        var arr = new Array("张无忌","郭靖","东方不败","乔峰","令狐冲","完颜洪烈","杨过","金轮法王","韦小宝");
+        var twoname = "";
+        var threename = "";
+        var fourname = "";
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i].length == 2){ 
+                twoname = twoname + arr[i] + " ";
+            }else if(arr[i].length == 3){
+                threename = threename + arr[i] + " ";
+            }else{
+                fourname = fourname + arr[i] + " ";
+            }
+        }
+        document.write(twoname);
+        document.write(threename);
+        document.write(fourname);
+
+        var newStr1 = new String("one world one Dream");
+        if(newStr1.constructor==String){
+            document.write("this is a stringobject");
+        }
+
+        String.prototype.getLength = function(){
+           document.write(this.length); 
+        }
+        var str = new String("abcdefg");
+        str.getLength();
+
+
+        Array.prototype.outLast = function(){
+            document.write(this[this.length-1]);
+        }
+        var arr = new Array(1,2,3,4,5,6,7,8);
+        arr.outLast();
+
+        var str = "你好零零七，我是零零发";
+        document.write(str.charAt(1));
+
+        var str34 = new String("你好零零七，我是零零发");
+        document.write(str34.charAt(6));
+
+        var str2 = "你好零零七，我是零零发";
+        document.write(str2.indexOf("零"));
+        document.write(str2.indexOf("零",4));
+        document.write(str.indexOf("零零八"));
+
+
+
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
